@@ -5,3 +5,6 @@ def inicio(request):
     contexto = {
      }
     return render(request, templates_name, contexto)
+
+def login(request):    
+    return render(request,'login.html', {})
