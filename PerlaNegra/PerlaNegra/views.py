@@ -1,10 +1,11 @@
 from django.shortcuts import render
+from producto.models import Producto
 
 def inicio(request):
-    templates_name = 'index.html'
-    contexto = {
-     }
-    return render(request, templates_name, contexto)
+    template_name = 'index.html'
 
-def login(request):    
-    return render(request,'login.html', {})
+    contexto = {
+    'producto': Producto.objects.all()
+}     
+
+    return render(request, template_name, contexto)

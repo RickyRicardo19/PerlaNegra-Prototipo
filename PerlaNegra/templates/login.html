@@ -13,20 +13,20 @@
   <body class="text-center">
     
 <main class="form-signin w-100 m-auto">
-  <form>
+  <form Method="post">{% csrf_token %} 
     <img class="mb-4" src="https://perlanegrasrl.com.ar/img/perlanegra_logo.svg" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Por favor inicie Sesion</h1>
+    <h1 class="h3 mb-3 fw-normal">Por favor inicie secion</h1>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="username">
       <label for="floatingInput">Nombre de Usuario</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
       <label for="floatingPassword">Contraseña</label>
     </div>
     <br>
-    <P><button class="w-100 btn btn-lg btn-primary" type="submit">INGRESAR</button></P>
+    <P><button class="w-100 btn btn-lg btn-primary" type="submit" name = "btn_ingresar">INGRESAR</button></P>
     <p><a class="w-100 btn btn-lg btn-primary" href="{% url 'inicio' %}">VOLVER AL INCIO</a></P>
     <p><a class="w-100 btn btn-lg btn-primary" href="">REGISTRARSE</a></P>
     <p><p class="mt-5 mb-3 text-muted">© 2017–2022</p></P>
@@ -37,4 +37,5 @@
     
   
 
-</body></html>
+  </body>
+</html>

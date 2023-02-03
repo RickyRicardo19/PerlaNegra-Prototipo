@@ -29,6 +29,10 @@ ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'usuarios.Usuarios'
 
+LOGIN_REDIRECT_URL = "/"
+
+LOGIN_URL = '/login/'
+
 
 # Application definition
 
